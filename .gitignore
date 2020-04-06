@@ -2,6 +2,7 @@ static/*
 !static/feature
 !static/img
 !static/uploaded
+!static/models
 !.gitkeep
 
 # Byte-compiled / optimized / DLL files
@@ -94,6 +95,4 @@ ENV/
 # Rope project settings
 .ropeproject
 .vscode/settings.json
-# static/img/*.jpg
-# static/feature/*.pkl
-# static/uploaded/*.jpg
+
