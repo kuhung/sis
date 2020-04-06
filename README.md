@@ -1,8 +1,8 @@
 # Sis: Simple Image Search Engine
 
 ## update by kuhung
-1. change model to smaller like MobileNetV2
-2. conflict about pip version and server upload bug fixed
+1. change model to smaller like MobileNetV2: offline faster,server cheaper
+2. conflict about pip version and server upload bug fixed,however flask somehow garbage
 
 ## [Demo](http://www.simple-image-search.xyz/)
 ![](http://yusukematsui.me/project/sis/img/screencapture2.jpg)

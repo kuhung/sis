@@ -1,12 +1,14 @@
 from keras.preprocessing import image
 from keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input
-from keras.models import Model
+from keras.models import Model,load_model
 import numpy as np
 
 
 class FeatureExtractor:
     def __init__(self):
         self.base_model = MobileNetV2(input_shape=(224, 224, 3), weights='imagenet', include_top=False, pooling='max') # change smaller model
+        self.base_model.load_weights('static/models/mobilenet_v2_weights_tf_dim_ordering_tf_kernels_1.0_224_no_top.h5')
+        self.base_model._make_predict_function()
 
     def extract(self, img):  # img is from PIL.Image.open(path) or keras.preprocessing.image.load_img(path)
         img = img.resize((224, 224))  # VGG must take a 224x224 img as an input
