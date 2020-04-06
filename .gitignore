@@ -96,3 +96,4 @@ ENV/
 .vscode/settings.json
 static/img/*.jpg
 static/feature/*.pkl
+static/uploaded/*.jpg
