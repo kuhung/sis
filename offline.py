@@ -17,7 +17,7 @@ def gen_future(img_path):
 
 # normal
 if __name__ == "__main__":
-    for img_path in tqdm(sorted(glob.glob('static/img/*.jpg'))):
+    for img_path in tqdm(sorted(glob.glob('static/test/*.jpg'))):
         gen_future(img_path)
 
 
