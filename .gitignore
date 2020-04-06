@@ -94,6 +94,6 @@ ENV/
 # Rope project settings
 .ropeproject
 .vscode/settings.json
-static/img/*.jpg
-static/feature/*.pkl
-static/uploaded/*.jpg
+# static/img/*.jpg
+# static/feature/*.pkl
+# static/uploaded/*.jpg
