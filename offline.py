@@ -5,8 +5,8 @@ from PIL import Image
 from feature_extractor import FeatureExtractor
 
 fe = FeatureExtractor()
-
-for img_path in sorted(glob.glob('static/img/*.jpg')):
+# TODO: 并行
+for img_path in sorted(glob.glob('static/test/*.jpg')):
     print(img_path)
     img = Image.open(img_path)  # PIL image
     feature = fe.extract(img)

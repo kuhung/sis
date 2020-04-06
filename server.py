@@ -24,7 +24,8 @@ def index():
         file = request.files['query_img']
 
         img = Image.open(file.stream)  # PIL image
-        uploaded_img_path = "static/uploaded/" + datetime.now().isoformat() + "_" + file.filename
+        # TODO: mark the info pic uploaded
+        uploaded_img_path = "static/uploaded/"+file.filename #+ datetime.now().isoformat() + "_" + file.filename
         img.save(uploaded_img_path)
 
         query = fe.extract(img)

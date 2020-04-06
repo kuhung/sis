@@ -1,14 +1,13 @@
 from keras.preprocessing import image
-from keras.applications.mobilenet_v2 import MobileNetV2, preprocess_input
+from keras.applications.vgg16 import VGG16, preprocess_input
 from keras.models import Model
 import numpy as np
 
 
 class FeatureExtractor:
     def __init__(self):
-        base_model = MobileNetV2(weights='imagenet') # change smaller model
-        print(base_model.summary())
-        self.model = Model(inputs=base_model.input, outputs=base_model.get_layer('out_relu').output)
+        base_model = VGG16(weights='imagenet') # TODO:smaller model
+        self.model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc1').output)
 
     def extract(self, img):  # img is from PIL.Image.open(path) or keras.preprocessing.image.load_img(path)
         img = img.resize((224, 224))  # VGG must take a 224x224 img as an input
